@@ -1,0 +1,8 @@
+/* Change default arrow size and color */
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px; /* bigger arrow */
+  color: #000000;  /* blue-600 in Tailwind */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
