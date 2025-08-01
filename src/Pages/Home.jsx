@@ -1,13 +1,13 @@
 import Header from "../Component/Header"
 import Footer from "../Component/Footer";
-import BannerSlider  from "../component/BannerSlider";
+import BannerSlider  from "../Component/BannerSlider";
 import ProductSlider from "../Component/ProductSlider";
 import FlashDeal from "../Component/FlashDeal";
 import Ajio from "../Component/Ajio";
 import Flipcart from "../Component/Flipcart";
-import Amazon from "../component/Amazon";
-import Myntra from "../component/Myntra";
-import MCaffeine from "../component/MCaffeine";
+import Amazon from "../Component/Amazon";
+import Myntra from "../Component/Myntra";
+import MCaffeine from "../Component/MCaffeine";
 
 
 
