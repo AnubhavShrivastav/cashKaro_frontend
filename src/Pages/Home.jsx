@@ -3,7 +3,7 @@ import Footer from "../Component/Footer";
 import BannerSlider  from "../component/BannerSlider";
 import ProductSlider from "../Component/ProductSlider";
 import FlashDeal from "../Component/FlashDeal";
-import Ajio from "../component/Ajio";
+import Ajio from "../Component/Ajio";
 import Flipcart from "../Component/Flipcart";
 import Amazon from "../component/Amazon";
 import Myntra from "../component/Myntra";
