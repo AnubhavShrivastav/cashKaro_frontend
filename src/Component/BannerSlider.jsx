@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../App.css"
 
-const images = [
+export const images = [
   "https://asset22.ckassets.com/resources/image/staticpage_images/Desktop%20Banner-1746783373.png",
   "https://asset22.ckassets.com/resources/image/staticpage_images/Desktop%20Banner-1747036591.png",
   "https://asset22.ckassets.com/resources/image/staticpage_images/Desktop%20Banner-1746783405.png",
@@ -36,7 +36,7 @@ function BannerSlider() {
   };
 
   return (
-
+    
     <div className="min-w-[200px] ml-8 mr-10 mt-28">
       <Slider {...settings}>
 
@@ -46,7 +46,7 @@ function BannerSlider() {
               src={banner}
               key={index}
               className="w-[534px] h-[248px] rounded-xl"
-              alt=""
+              
             />
           </div>
         ))}

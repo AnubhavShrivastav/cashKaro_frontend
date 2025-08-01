@@ -1,25 +1,77 @@
+import { Link } from "react-router-dom"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
 
-const Banner = [
-  "https://asset22.ckassets.com/resources/image/staticpage_images/Coffee%20Body%20Scrub-1743077422.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/Blueberry%20Blast%20Body%20Wash-1743077446.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/Brightening%20Raspberry%20Body%20Wash-1743077469.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/Sweet%20Escape%20Perfume%20Body%20Lotion-1743077491.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/Breeze%20Perfume%20Body%20Lotion-1743077512.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/Brightening%20Raspberry%20Sunscreen-1743077529.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/Super%20Glow%20Flash%20Facial%20Mask-1743077571.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/Glow%20Boost%20Grapefruit%20Body%20Wash-1743077603.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/Sun%20Glaze%20Mist%20Face%20Sunscreen%20Spray-1743077636.png",
+const MCaffeineImage = [
+  {
+    id: 1,
+    img:"https://asset22.ckassets.com/resources/image/staticpage_images/Coffee%20Body%20Scrub-1743077422.png",
+    title: "MCaffeine: 2 X Coffee Body Scrub At ₹449 + Flat 18% Rewards",
+    descripition: "",
+  },
+
+  {
+    id: 2,
+    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Blueberry%20Blast%20Body%20Wash-1743077446.png",
+    title: "MCaffeine: 2 X BlueBerry Blast Body Wash At ₹399 + Flat 18% Rewards",
+    descripition: "",
+  },
+
+  {
+   id: 3, 
+   img: "https://asset22.ckassets.com/resources/image/staticpage_images/Brightening%20Raspberry%20Body%20Wash-1743077469.png",
+   title: "MCaffeine: 2 X Brightening Raspberry Body Wash At ₹399 + Flat 18% Rewards",
+   descripition: "",
+  },
+
+  {id: 4,
+   img: "https://asset22.ckassets.com/resources/image/staticpage_images/Sweet%20Escape%20Perfume%20Body%20Lotion-1743077491.png",
+   title: "MCaffeine: 2 X Sweet Escape Body Lotion At ₹499 + Flat 18% Rewards",
+   descripition: "",
+  },
+  {
+   id: 5,
+   img: "https://asset22.ckassets.com/resources/image/staticpage_images/Breeze%20Perfume%20Body%20Lotion-1743077512.png",
+   title: "MCaffeine: 2 X Breeze Perfume Body Lotion At ₹499 + Flat 18% Rewards",
+   descripition: "",
+  },
+
+  {
+   id: 6,
+   img: "https://asset22.ckassets.com/resources/image/staticpage_images/Brightening%20Raspberry%20Sunscreen-1743077529.png",
+   title: "MCaffeine: 2 X Brightening Raspberry Sunscreen At ₹549 + Flat 18% Rewards",
+   descripition: "",
+  },
+
+  {
+    id: 7,
+    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Super%20Glow%20Flash%20Facial%20Mask-1743077571.png",
+    title: "MCaffeine: 2 X Super Glow Flash Facial Mask At ₹599 + Flat 18% Rewards",
+    descripition: "",
+  },
+  
+  { 
+    id: 8,
+    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Glow%20Boost%20Grapefruit%20Body%20Wash-1743077603.png",
+    title: "MCaffeine: Glow Grapefruit Body Wash At ₹399 + Flat 18% Rewards",
+    descripition: ""
+  },
+
+  {
+    id: 9,
+    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Sun%20Glaze%20Mist%20Face%20Sunscreen%20Spray-1743077636.png",
+    title: "MCaffeine: Sun Glaze Sunscreen Spary At ₹699 + Flat 18% Rewards",
+    descripition: "",
+  },
 ];
 
-function MCaffeine() {
+export default function MCaffeine() {
 
   const settings = {
-    dots: true,          // shows navigation dots
+    dots: false,          // shows navigation dots
     infinite: false,      // infinite loop
     speed: 500,          // transition speed in ms
     slidesToShow: 3.5,     // number of slides visible
@@ -28,41 +80,43 @@ function MCaffeine() {
     autoplaySpeed: 2000, // 2 seconds
   };
 
-  
-  return (
-    <div className="ml-2 my-7">
-      <h1 className="text-2xl font-bold ml-5">mCaffeine - Buy 1 Get 1 Free</h1>
 
-      <div className="ml-3 my-3">
+  return (
+    <>
+      <h1 className="text-2xl font-bold mx-7">mCaffeine - Buy 1 Get 1 Free</h1>
+
+      <div className="min-w-[200px] m-7">
         <Slider {...settings}>
-          {Banner.map((img, index) => (
+          {MCaffeineImage.map((image, index) => (
             <div
               key={index}
-              className="min-w-[180px] relative m-3 cursor-pointer"
+              className="min-w-[180px] relative cursor-pointer"
             >
+              <Link to={`/Mcaffeine/${image.id}`}>
               <img
-                src={img}
+                src={image.img}
                 alt={`Image ${index}`}
                 className="ml-1 my-1"
                 width={410}
               />
+              </Link>
               <img
                 src="https://asset20.ckassets.com/resources/image/stores/mcaffeine-coupons-1735628969.jpg"
-                className="absolute rounded-xl left-[5%] top-[5%] right-[60%] bottom-[90%]"
+                className="absolute rounded-xl left-[3%] top-[4%] right-[60%] bottom-[90%]"
                 height={90}
                 width={100}
                 alt={`Slide ${index}`}
               />
 
-              <button className="absolute cursor-pointer inline bottom-[6%] left-[70%] rounded-lg px-3 py-1 bg-white text-blue-700 font-semibold text-lg">
+              <button className="absolute cursor-pointer inline bottom-[6%] left-[71%] rounded-lg px-3 py-1 bg-white text-blue-700 font-semibold text-lg">
                 Grab Deal
               </button>
             </div>
           ))}
-          </Slider>
+        </Slider>
       </div>
-    </div>
+    </>
   );
 }
 
-export default MCaffeine;
+export { MCaffeineImage };
