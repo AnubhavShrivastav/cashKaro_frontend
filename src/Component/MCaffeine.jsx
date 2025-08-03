@@ -4,67 +4,67 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-
 const MCaffeineImage = [
   {
     id: 1,
     img:"https://asset22.ckassets.com/resources/image/staticpage_images/Coffee%20Body%20Scrub-1743077422.png",
     title: "MCaffeine: 2 X Coffee Body Scrub At ₹449 + Flat 18% Rewards",
-    descripition: "",
+    details: ["2 X Coffee Body Scrub At ₹449","Earn Flat 18% CashKaro Cashback"],
   },
 
   {
     id: 2,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Blueberry%20Blast%20Body%20Wash-1743077446.png",
     title: "MCaffeine: 2 X BlueBerry Blast Body Wash At ₹399 + Flat 18% Rewards",
-    descripition: "",
+    details: ["2 X BlueBerry Blast Body Wash At ₹399","Earn Flat 18% CashKaro Cashback"],
   },
 
   {
    id: 3, 
    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Brightening%20Raspberry%20Body%20Wash-1743077469.png",
    title: "MCaffeine: 2 X Brightening Raspberry Body Wash At ₹399 + Flat 18% Rewards",
-   descripition: "",
+   details: ["2 X Brightening Raspberry Body Wash At ₹399","Earn Flat 18% CashKaro Cashback"],
   },
 
   {id: 4,
    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Sweet%20Escape%20Perfume%20Body%20Lotion-1743077491.png",
    title: "MCaffeine: 2 X Sweet Escape Body Lotion At ₹499 + Flat 18% Rewards",
-   descripition: "",
+   details: ["2 X Sweet Escape Body Lotion At ₹499","Earn Flat 18% CashKaro Cashback"],
   },
+
   {
    id: 5,
    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Breeze%20Perfume%20Body%20Lotion-1743077512.png",
    title: "MCaffeine: 2 X Breeze Perfume Body Lotion At ₹499 + Flat 18% Rewards",
-   descripition: "",
+   details: ["2 X Breeze Perfume Body Lotion At ₹499","Earn Flat 18% CashKaro Cashback"],
   },
 
   {
    id: 6,
    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Brightening%20Raspberry%20Sunscreen-1743077529.png",
    title: "MCaffeine: 2 X Brightening Raspberry Sunscreen At ₹549 + Flat 18% Rewards",
-   descripition: "",
+   details: [" 2 X Brightening Raspberry Sunscreen At ₹549","Earn Flat 18% CashKaro Cashback"],
   },
 
   {
     id: 7,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Super%20Glow%20Flash%20Facial%20Mask-1743077571.png",
     title: "MCaffeine: 2 X Super Glow Flash Facial Mask At ₹599 + Flat 18% Rewards",
-    descripition: "",
+    details: ["2 X Super Glow Flash Facial Mask At ₹599","Earn Flat 18% CashKaro Cashback"],
   },
   
   { 
     id: 8,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Glow%20Boost%20Grapefruit%20Body%20Wash-1743077603.png",
     title: "MCaffeine: Glow Grapefruit Body Wash At ₹399 + Flat 18% Rewards",
-    descripition: ""
+    details: ["Glow Grapefruit Body Wash At ₹399","Earn Flat 18% CashKaro Cashback"]
   },
 
   {
     id: 9,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Sun%20Glaze%20Mist%20Face%20Sunscreen%20Spray-1743077636.png",
     title: "MCaffeine: Sun Glaze Sunscreen Spary At ₹699 + Flat 18% Rewards",
-    descripition: "",
+    details: ["Sun Glaze Sunscreen Spary At ₹699","Earn Flat 18% CashKaro Cashback"],
   },
 ];
 

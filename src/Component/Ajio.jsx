@@ -8,72 +8,72 @@ const AjioImage = [
     id: 1,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Under%20532-1747131217.png",
     title: "Ajio: Everything under Rs. 499 + Upto 10% CashKaro Cashback",
-    description: [ "Everything under Rs. 499","Flat 10% Ajio Supercash on all Orders","Upto 10% CashKaro Cashback on all Orders","Cashback for New Users: 10%",
-    "Cashback for Existing Users: 8%","Cashback on all Orders of Gold & Silver (Idols, Bars, Coins, and Jewellery): 0.33%"
-    ]
+    details: ["Everything under Rs. 499", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
   },
+
   {
     id: 2,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Under%20531-1747131207.png",
     title: "Ajio: Everything under Rs. 399 + Upto 10% CashKaro Cashback",
-    description: "",
+    details: ["Everything under Rs. 399", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"]  
   },
 
   {
     id: 3,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Under%20530-1747131198.png",
     title: "Ajio: Everything under Rs. 299 + Upto 10% CashKaro Cashback",
-    description: ""
+    details: ["Everything under Rs. 299", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],  
   },
 
   {
     id: 4,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Skincare-1747131065.png",
     title: "Ajio: Min. 40% Off on SkinCare + Upto 10% CashKaro Cashback",
-    description: ""
+    details: ["Minimum 40% Off on Skincare", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
   },
-  
+
   {
     id: 5,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/MenTrousers-1747131039.png",
     title: "Ajio: Min. 50% Off on FootWear + Upto 10% CashKaro Cashback",
-    description: ""
+    details: ["Minimum 50% Off on Footwear", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
   },
-
 
   {
     id: 6,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Pants%20Trousers-1747131097.png",
     title: "Ajio: 40% to 70% Off on Pants & Trousers + Upto 10% CashKaro Cashback",
-    description: ""
+    details: ["40-70% Off on Trousers and Pants", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],  
   },
 
   {
     id: 7,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/TShirt-1747131108.png",
     title: "Ajio: 40% to 60% Off on T-Shirt + Upto 10% CashKaro Cashback",
-    description: ""
+    details: ["40-60% Off on Tshirt", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],  
   },
+
   {
     id: 8,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Women%20Handbags-1747131120.png",
     title: "Ajio: Upto 70% Off on Women's HandBags + Upto 10% CashKaro Cashback",
-    description: ""
+    details: ["Up to 70% Off on Women Handbags", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
   },
 
   {
     id: 9,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Dress-1747131083.png",
     title: "Ajio: Under 899 on Dresses + Upto 10% CashKaro Cashback",
-    description: ""
+    details: ["Dresses under Rs. 899", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
   },
 
   {
     id: 10,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Under%20527-1746696315.png",
     title: "Ajio: Everything under Rs. 299 + Upto 8% CashKaro Cashback",
-    description: ""
+    details: ["Everything under Rs. 299", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
   },
+  
 ];
 
 export default function Ajio() {

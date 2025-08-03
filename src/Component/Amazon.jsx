@@ -10,52 +10,56 @@ const AmazonImage = [
     id: 1,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Beauty%20Products%201-1745564957.png",
     title: "Amazon: Min. 50% Off on Beauty Products + Flat 6% Rewards",
-    descripition: ""
+    details: ["Minimum 50% off on Beauty Products","Flat 6% CashKaro Rewards on all Orders"]
   },
-
+     
   {
     id: 2,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Personal%20Care-1738069570.png",
-    title: "",
-    descripition: "Amazon: Min. 25% Off on Personal Care + Flat 3.5% Rewards"
+    title: "Amazon: Min. 25% Off on Personal Care + Flat 3.5% Rewards",
+    details: ["Minimum 25% Off on Personal Care","Flat 3.5% CashKaro Rewards on all Orders"]
   },
 
   {
     id: 3,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Footwear-1738069495.png",
     title: "Amazon: Min. 25% Off on FootWear + Flat 3.5% Rewards",
-    descripition: ""
+    details: ["Minimum 25% Off on Footwear","Flat 3.5% CashKaro Rewards on all Orders"]
   },
+    
   {
     id: 4,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Watches-1738069623.png",
     title: "Amazon: Min. 35% Off on Watches + Flat 3.5% Rewards",
-    descripition: "",
+    details: ["Minimum 35% Off on Footwear","Flat 3.5% CashKaro Rewards on all Orders"]
   },
+
   {
     id: 5,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Home%20Improvements%20Products-1738069521.png",
     title: "Amazon: Upto 60% Off on Home Improvements Products + Flat 4% Rewards",
-    descripition: "",
+    deatils: ["Upto 60% Off on Home Improvements Products","Flat 4% CashKaro Rewards on all Orders"]
   },
+
   {
     id: 6,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Baby%20Products-1738069448.png",
     title: "Amazon: Upto 50% Off on Bags & Wallets + Flat 3.5% Rewards",
-    descripition: ""
+    details:  ["Upto 50% Off on Bags & Wallets","Flat 3.5% CashKaro Rewards on all Orders"]
   },
+
   {
     id: 7,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Luggage-1738069556.png",
     title: "Amazon: Upto 70% Off on Luggage + Flat 3.5% Rewards",
-    descripition: ""
+    details: ["Upto 70% Off on Luggage","Flat 3.5% CashKaro Rewards on all Orders"]
   },
 
   {
     id: 8,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Jewellery-1738069535.png",
     title: "Amazon: Upto 70% Off on Jewellery + Flat 2.5% Rewards",
-    descripition: ""
+    details: ["Upto 70% Off on Jewellery","Flat 2.5% CashKaro Rewards on all Orders"]
   },
 ];
 

@@ -38,8 +38,8 @@ function ProductSlider() {
 
 
   return (
-    <div className="min-w-[200px] ml-8 mr-10 my-3">
-      <h1 className="text-2xl font-bold py-6 mb-2">Top Categories</h1>
+    <div className="min-w-[200px] my-3">
+      <h1 className="text-2xl font-bold py-6 mb-2 mx-10">Top Categories</h1>
 
       <div className="min-w-[200px] ml-8 mr-10 my-3">
         <Slider {...settings}>

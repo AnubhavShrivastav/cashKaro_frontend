@@ -1,14 +1,18 @@
+import { Link } from "react-router-dom"
+
 function Header() {
   return (
     <header className="fixed w-full bg-white shadow-md top-0 left-0 z-50">
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-14 flex justify-between items-center h-20">
         <div className="flex items-center md:space-x-4 cursor-pointer">
           <img src="https://asset22.ckassets.com/wp/wp-content/themes/CashKaro_WP_V1/img/mobile_toggle.svg" alt="menu" className="mr-2 w-6 md:mr-5" />
-          <img
-            src="img/CashKaro.svg"
+         <Link to="/"> 
+         <img
+            src="/img/CashKaro.svg"
             alt="logo"
             className="w-20 sm:w-auto"
           />
+          </Link>
         </div>
 
         <div className="md:flex flex-grow justify-center md:left-10 md:mx-10">

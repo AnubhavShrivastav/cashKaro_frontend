@@ -4,40 +4,40 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-const flipCartImage = [
+const flipkartImage = [
 {
   id: 1 ,
   img: "https://asset22.ckassets.com/resources/image/staticpage_images/Flipkart%20Generic%20TSP%20Jeans%20Trousers-1747120163.png",
   title: "FlipCart: Upto 85% Off On Jeans & Trousers + Flat 2.1% Rewards",
-  descripition: "",
+  details: ["Up to 85% Off on Jeans & Trousers","Get additional 10% Off on Selected Cards","Earn Flat 2.1% CashKaro Cashback"]
 },
 
 {
   id: 2,  
   img: "https://asset22.ckassets.com/resources/image/staticpage_images/Flipkart%20Generic%20Top%20Fashion%20Brands-1746722016.png",
   title: "FlipCart: Upto 75% Off On Top Fashion Brands + Flat 2.1% Rewards",
-  descripition: "",
+  details: ["Up to 75% Off on Top Fashion Brands","Get additional 10% Off on Selected Cards","Earn Flat 2.1% CashKaro Cashback"],
 },
 
- {
+{
   id: 3,
   img: "https://asset22.ckassets.com/resources/image/staticpage_images/Flipkart%20Generic%20TSP%20Shirt-1747119841.png",
   title: "FlipCart: Upto 85% Off On Shirts + Flat 2.1% Rewards",
-  descripition: "",
+  details: ["Up to 85% Off on Shirts","Get additional 10% Off on Selected Cards","Earn Flat 2.1% CashKaro Cashback"],
 },
 
- {
+{
   id: 4,
   img: "https://asset22.ckassets.com/resources/image/staticpage_images/Flipkart%20Generic%20TSP%20Footwear-1747120034.png",
   title: "FlipCart: Upto 80% Off On FootWear + Flat 2.1% Rewards",
-  descripition: "",
+  details: ["Up to 80% Off On FootWear","Get additional 10% Off on Selected Cards","Earn Flat 2.1% CashKaro Cashback"],
 },
 
 {
   id: 5,
   img: "https://asset22.ckassets.com/resources/image/staticpage_images/Flipkart%20Generic%20Perfumes%20Deodorants-1747120060.png",
   title: "FlipCart: Upto 80% Off On Perfumes & Deodorants + Flat 2.1% Rewards",
-  descripition: "",
+  details: ["Up to 80% Off On Perfumes & Deodorants","Get additional 10% Off on Selected Cards","Earn Flat 2.1% CashKaro Cashback"],
 },
 
 ];
@@ -61,7 +61,7 @@ export default function Flipcart() {
 
       <div className="min-w-[200px] m-7">
         <Slider {...settings}>
-          {flipCartImage.map((image, index) => (
+          {flipkartImage.map((image, index) => (
             <div
               key={index}
               className="min-w-[180px] relative cursor-pointer"
@@ -88,4 +88,4 @@ export default function Flipcart() {
   );
 }
 
-export { flipCartImage };
+export { flipkartImage };

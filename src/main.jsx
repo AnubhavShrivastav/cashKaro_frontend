@@ -4,13 +4,13 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from "./App"
 import ImageDeatils from "./Pages/ImageDeatils";
-// import ProductDetails from "./Pages/ProductDetails"
+
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
-      <Routes>
-    {/* <App /> */}
+    <Routes>
     <Route path="/" element={<App />} />
     <Route path="/:category/:id" element={<ImageDeatils />}  />
     </Routes>

@@ -8,21 +8,21 @@ const MyntraImage = [
     id: 1,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Ethnic%20wear-1738129257.png",
     title: "Myntra: Upto 60% Off On Ethnic Wear + Upto 6% CashKaro CashBack",
-    descripition: "",
+    details: ["Up to 60% on Ethnic wear","Flat 6% Cashback"],
   },
 
   {
     id: 2,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/bags-1738129192.png",
     title: "Myntra: Upto 60% Off On Trolly Bags, Bagpacks + Upto 6% CashKaro CashBack",
-    descripition: "",
+    details: ["Up to 60% on Trolly Bags, Bagpacks","Flat 6% Cashback"],
   },
 
   {
     id: 3,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/speaker-1738129900.png",
     title: "Myntra: Upto 70% Off On Headphones & Speakers + Upto 6% CashKaro CashBack",
-    descripition: "",
+    details: ["Up to 70% on Headphones & Speakers","Flat 6% Cashback"],
   },
 
 
@@ -30,35 +30,35 @@ const MyntraImage = [
     id: 4,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/decor-1738129206.png",
     title: "Myntra: Upto 70% Off On Home Decor + Upto 6% CashKaro CashBack",
-    descripition: "",
+    details: ["Up to 70% on Home Decor","Flat 6% Cashback"],
   },
 
   {
     id: 5,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Footwear-1738129268.png",
     title: "Myntra: Upto 70% Off On FootWear + Upto 6% CashKaro CashBack",
-    descripition: "",
+    details: ["Up to 70% on Home FootWear","Flat 6% Cashback"],
   },
 
   {
     id: 6,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/shirts-1738129356.png",
     title: "Myntra: Men's Shirts Under ₹599 + Upto 6% CashKaro CashBack",
-    descripition: "",
+    deatils:  ["Men's Shirts Under Rs ₹599","Flat 6% Cashback"],
   },
 
   {
     id: 7,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Deodorants-1738129220.png",
     title: "Myntra: Deodorants Under ₹199 + Upto 6% CashKaro CashBack",
-    descripition: "",
+    details: ["Deodorants Under Rs ₹199","Flat 6% Cashback"],
   },
 
   {
     id: 8,
     img: "https://asset22.ckassets.com/resources/image/staticpage_images/trouser-1738129946.png",
     title: "Myntra: Men's Trousers Under ₹799 + Upto 6% CashKaro CashBack",
-    descripition: "",
+    details: ["Men's Trousers Under Rs ₹799","Flat 6% Cashback"],
   },
 ];
 
