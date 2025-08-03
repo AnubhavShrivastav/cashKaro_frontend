@@ -1,4 +1,5 @@
-import { useParams, Link } from "react-router-dom"
+import { useParams, Link, useLocation } from "react-router-dom"
+import { useEffect } from 'react'
 import { AjioImage } from "../Component/Ajio"
 import Header from "../Component/Header"
 import { AmazonImage } from "../Component/Amazon"
@@ -9,6 +10,11 @@ import Footer from "../Component/Footer";
 
 function ImageDeatils() {
   const { category, id } = useParams();
+  const { pathName } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[pathName])
 
   const allData = {
     Amazon: AmazonImage,
