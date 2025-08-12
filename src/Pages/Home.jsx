@@ -1,7 +1,7 @@
 import Header from "../Component/Header"
 import Footer from "../Component/Footer";
 import BannerSlider  from "../Component/BannerSlider";
-import ProductSlider from "../Component/ProductSlider";
+import CategorySlider from "../Component/CategorySlider";
 import FlashDeal from "../Component/FlashDeal";
 import Ajio from "../Component/Ajio";
 import Flipkart from "../Component/Flipcart";
@@ -16,7 +16,7 @@ function HomePage() {
     <>
       <Header />
       <BannerSlider />
-      <ProductSlider />
+      <CategorySlider />
       <FlashDeal />
       <Ajio />
       <Flipkart />

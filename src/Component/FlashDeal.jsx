@@ -1,21 +1,36 @@
+import { useState,useEffect } from "react";
 
+// const Banner = [
+//   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/Vajor-1754553346-68945c02c2cd7.png", brandLogo: "https://asset20.ckassets.com/resources/image/stores/estuary-world-coupons-1741361039.png" },
+//   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/Vajor-1754638375-6895a827aa016.png", brandLogo: "https://asset20.ckassets.com/resources/image/stores/strch-coupons-1735648158.jpg" },
+//   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/Vajor-1754553507-68945ca328144.png", brandLogo: "https://asset20.ckassets.com/resources/image/stores/bajaj-prime-coupons-1742820629.png" },
+//   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/Vajor-1754553489-68945c917869d.png", brandLogo: "https://asset20.ckassets.com/resources/image/stores/indigo-hotels-coupons-1753248566.png" },
+//   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/Vajor-1754553471-68945c7fe7ef4.png", brandLogo: "https://asset20.ckassets.com/resources/image/stores/times-prime-coupons-1735635238.jpg" },
+//   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/Vajor-1754638387-6895a83368fa8.png", brandLogo: "https://asset20.ckassets.com/resources/image/stores/house-of-koala-offers-1745230983.png" },
+//   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/Vajor-1754638403-6895a8441075d.png", brandLogo: "https://asset20.ckassets.com/resources/image/stores/zop-coupons-test-1749805371.png" },
+//   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/Vajor-1754638415-6895a84fc024c.png", brandLogo: "https://asset20.ckassets.com/resources/image/stores/mini-klub-offers-test-1752212624.png" },
+//   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/Vajor-1754551695-6894558f3243d.png", brandLogo: "https://asset20.ckassets.com/resources/image/stores/koparoclean-coupons-1735633997.jpg" },
+//   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/The%20SG%20Store-1754681365.png",    brandLogo: "https://asset20.ckassets.com/resources/image/stores/thesgstore-coupons-test-1754639086.png" },
+//   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/Vajor-1754553388-68945c2cd378e.png", brandLogo: "https://asset20.ckassets.com/resources/image/stores/kindlife-coupons-1735627247.jpg" },
+//   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/Vajor-1754553287-68945bc735f6b.png", brandLogo: "https://asset20.ckassets.com/resources/image/stores/scentials-offers-1745214254.png" },
+//   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/Vajor-1754553308-68945bdc54277.png", brandLogo: "https://asset20.ckassets.com/resources/image/stores/veeba-coupons-1747720329.png" },
 
-const Banner = [
-  "https://asset22.ckassets.com/resources/image/staticpage_images/CLOVE%2011%202%20(1)-1745507182.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/bajaj%20prime%201-1744884840.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/axis%20fk-1746787909.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/colors%20queen-1747209902.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/weryze-1744895890.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/cleevo%201-1747123670.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/time%20prime%20(1)-1746768415.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/ramam-1744270496.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/CLOVE%2023-1747122400.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/SBI-1743060547.png",
-  "https://asset22.ckassets.com/resources/image/staticpage_images/fitspire-1746777129.png",
-];
+// ];
 
 function FlashDeal() {
-  
+
+  const [image,setImage] = useState([]);
+
+  useEffect(() => {
+   fetch("http://localhost:3000/api/flashdeal")
+   .then((response) => response.json())
+   .then((result) => {
+    setImage(result.Data)
+   })
+   .catch((error) => {
+      console.log("Error Fetching error: ", error)
+   })
+  },[])
 
   return (
     <div className="my-8">
@@ -36,14 +51,15 @@ function FlashDeal() {
           </p>
 
           <div className="flex items-center overflow-auto my-2 min-w-[200px] h-[300px] absolute bottom-[20%] left-[3%]">
-            {Banner.map((image, index) => (
+            {image.map((img) => (
               <img
-                src={image}
-                key={index}
+                src={img.imageUrl}
                 className="mx-2 inline"
                 width={400}
                 height={250}
               />
+             
+
             ))}
           </div>
 
@@ -51,9 +67,10 @@ function FlashDeal() {
           View All
         </button> */}
 
-          {/* <button className="block bg-blue-800 rounded-xl px-3 py-2 mt-2 ml-2 text-white font-semibold">
+           {/* <button className="block bg-blue-800 rounded-xl px-3 py-2 mt-2 ml-2 text-white font-semibold">
             Grab Deal
-          </button> */}
+          </button>  */}
+          
         </div>
       </div>
     </div>
