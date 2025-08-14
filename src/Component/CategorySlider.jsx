@@ -1,7 +1,10 @@
-import { useState, useEffect } from "react";
+// import { Slider, settings } from "../Constant.js"
+import useFetch from "../Hooks/UseFetch"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../App.css"
+
 
 // const images = [
 //   { productImage: "https://asset20.ckassets.com/resources/image/category/banking-finance-offers-4684-17455848681.png", productName: "Credit Cards" },
@@ -26,8 +29,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 function CategorySlider() {
 
- const [category, setCategory] = useState([])
-
   const settings = {
     dots: false,          // shows navigation dots
     infinite: false,      // infinite loop
@@ -36,16 +37,10 @@ function CategorySlider() {
     slidesToScroll: 3,   // number of slides to scroll at a time
     autoplay: false,      // auto slide
     autoplaySpeed: 2000, // 2 seconds
+    arrow: true
   };
 
-   useEffect(() => {
-    fetch("http://localhost:3000/api/category")
-    .then(response => response.json())
-    .then((result) => {
-      setCategory(result.Data)
-    })
-    .catch((error) => console.log("Error fetching error: ", error))
-   },[])
+ const { data, error } = useFetch("http://localhost:3000/api/category")
 
 
   return (
@@ -54,11 +49,12 @@ function CategorySlider() {
 
       <div className="min-w-[200px] ml-8 mr-10 my-3">
         <Slider {...settings}>
-          {category.map((item) => (
+          {Array.isArray(data.Data)&&data.Data.map((item) => (
             <div className="px-1 mb-6">
               <img
                 src={item.imageUrl}
                 className="mx-1 hover:scale-105"
+                alt={error}
                 height={125}
                 width={135}
               />

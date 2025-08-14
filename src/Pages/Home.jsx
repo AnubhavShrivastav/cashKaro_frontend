@@ -8,7 +8,7 @@ import Flipkart from "../Component/Flipcart";
 import Amazon from "../Component/Amazon";
 import Myntra from "../Component/Myntra";
 import MCaffeine from "../Component/MCaffeine";
-
+import Hyphen from "../Component/Hyphen"
 
 
 function HomePage() {
@@ -22,7 +22,8 @@ function HomePage() {
       <Flipkart />
       <Amazon />
       <Myntra />
-      <MCaffeine />
+      <MCaffeine /> 
+      <Hyphen />
       <Footer />
     </>
   );

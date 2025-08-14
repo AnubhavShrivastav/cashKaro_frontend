@@ -1,8 +1,51 @@
 /* Change default arrow size and color */
 .slick-prev:before,
 .slick-next:before {
-  font-size: 30px; /* bigger arrow */
-  color: #000000;  /* blue-600 in Tailwind */
+  font-size: 30px;  
+  background-color: black;
+  color: black;
   opacity: 1;
   transition: opacity 0.3s ease;
 }
+
+
+/* Sidebar */
+
+.menu { 
+  color: black;
+  font-weight: bold;
+  background: rgb(255, 255, 255);
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 25px;
+  height: 20px;
+  left: 30px;
+  top: 30px;
+}
+
+.heading{
+  margin: 14px;
+  font-size: medium;
+}
+
+.menu-item{
+  margin: 25px;
+  font-size: small;
+}
+
+.menu-item:hover{
+  color: rgb(46, 117, 233);
+}
+
+
+.bm-cross {
+  background: #04090c;
+}
+
+.horizontal-line{
+  color: #a3a1a1
+}
+
+
