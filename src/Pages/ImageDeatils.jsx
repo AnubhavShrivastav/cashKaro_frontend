@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { AjioImage } from "../Component/Ajio"
 import Header from "../Component/Header"
 import { AmazonImage } from "../Component/Amazon"
-import { flipkartImage } from "../Component/Flipcart"
+import { flipkartImage } from "../Component/Flipkart"
 import { MyntraImage } from "../Component/Myntra"
 import { MCaffeineImage } from "../Component/MCaffeine"
 import Footer from "../Component/Footer";

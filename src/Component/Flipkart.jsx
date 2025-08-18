@@ -57,7 +57,7 @@ export default function Flipcart() {
 
   return (
      <>
-    <h1 className="text-2xl font-bold mx-7">FlipCart - Top Deals</h1>
+    <h1 className="text-2xl font-bold mx-7">Flipkart - Top Deals</h1>
 
       <div className="min-w-[200px] m-7">
         <Slider {...settings}>

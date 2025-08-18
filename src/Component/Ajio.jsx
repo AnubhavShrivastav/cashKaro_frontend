@@ -94,7 +94,7 @@ export default function Ajio() {
     <>
       <h1 className="text-2xl font-bold mx-7">Ajio - Top Deals</h1>
 
-      <div className="min-w-[200px] m-6">
+      <div className="min-w-[200px] m-7">
         <Slider {...settings}>
 
           {AjioImage.map((image, index) => (

@@ -4,7 +4,7 @@ import BannerSlider  from "../Component/BannerSlider";
 import CategorySlider from "../Component/CategorySlider";
 import FlashDeal from "../Component/FlashDeal";
 import Ajio from "../Component/Ajio";
-import Flipkart from "../Component/Flipcart";
+import Flipkart from "../Component/Flipkart";
 import Amazon from "../Component/Amazon";
 import Myntra from "../Component/Myntra";
 import MCaffeine from "../Component/MCaffeine";
