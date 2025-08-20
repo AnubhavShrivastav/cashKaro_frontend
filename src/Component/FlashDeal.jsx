@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import useFetch from "../Hooks/UseFetch";
 
 // const Banner = [
 //   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/Vajor-1754553346-68945c02c2cd7.png", brandLogo: "https://asset20.ckassets.com/resources/image/stores/estuary-world-coupons-1741361039.png" },
@@ -19,27 +19,17 @@ import { useState,useEffect } from "react";
 
 function FlashDeal() {
 
-  const [image,setImage] = useState([]);
 
-  useEffect(() => {
-   fetch("http://localhost:3000/api/flashdeal")
-   .then((response) => response.json())
-   .then((result) => {
-    setImage(result.Data)
-   })
-   .catch((error) => {
-      console.log("Error Fetching error: ", error)
-   })
-  },[])
+  const { data, error } = useFetch("http://localhost:3000/api/flashdeal")
 
   return (
-    <div className="my-8">
+    <div className="my-50 sm:my-8">
       <div className="relative">
         <img
           src="https://asset22.ckassets.com/resources/image/dynamicpage_images/Desktop_Background-1740145506.png"
-          height={5000}
+          height={6000}
           width={3500}
-          alt=""
+          alt={error}
         />
 
         <div className="">
@@ -50,27 +40,23 @@ function FlashDeal() {
             🕓 Ends in 01 day
           </p>
 
-          <div className="flex items-center overflow-auto my-2 min-w-[200px] h-[300px] absolute bottom-[20%] left-[3%]">
-            {image.map((img) => (
+          <div className="flex overflow-auto min-w-[200px] h-[330px] absolute bottom-[20%] left-[3%]">
+            {Array.isArray(data.Data) && data.Data.map((img) => (
               <img
                 src={img.imageUrl}
                 className="mx-2 inline"
-                width={400}
-                height={250}
               />
-             
 
             ))}
+
+
           </div>
 
-          {/* <button className="block relative right-[30%]  left-[40%] bottom-[20%] m-3 rounded-lg px-30 py-3 bg-red-400 text-white">
-          View All
-        </button> */}
+          <button className="block absolute right-[34%] left-[40%] bottom-[5%] m-3 rounded-lg px-30 py-3 bg-neutral-300 opacity-300 text-white font-bold">
+            View All
+          </button>
 
-           {/* <button className="block bg-blue-800 rounded-xl px-3 py-2 mt-2 ml-2 text-white font-semibold">
-            Grab Deal
-          </button>  */}
-          
+
         </div>
       </div>
     </div>

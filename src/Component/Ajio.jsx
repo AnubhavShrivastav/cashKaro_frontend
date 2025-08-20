@@ -2,81 +2,85 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import useFetch from "../Hooks/UseFetch";
 
-const AjioImage = [
-  {
-    id: 1,
-    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Under%20532-1747131217.png",
-    title: "Ajio: Everything under Rs. 499 + Upto 10% CashKaro Cashback",
-    details: ["Everything under Rs. 499", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
-  },
+// const AjioImage = [
+//   {
+//     id: 1,
+//     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Under%20532-1747131217.png",
+//     title: "Ajio: Everything under Rs. 499 + Upto 10% CashKaro Cashback",
+//     details: ["Everything under Rs. 499", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
+//   },
 
-  {
-    id: 2,
-    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Under%20531-1747131207.png",
-    title: "Ajio: Everything under Rs. 399 + Upto 10% CashKaro Cashback",
-    details: ["Everything under Rs. 399", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"]  
-  },
+//   {
+//     id: 2,
+//     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Under%20531-1747131207.png",
+//     title: "Ajio: Everything under Rs. 399 + Upto 10% CashKaro Cashback",
+//     details: ["Everything under Rs. 399", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"]  
+//   },
 
-  {
-    id: 3,
-    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Under%20530-1747131198.png",
-    title: "Ajio: Everything under Rs. 299 + Upto 10% CashKaro Cashback",
-    details: ["Everything under Rs. 299", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],  
-  },
+//   {
+//     id: 3,
+//     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Under%20530-1747131198.png",
+//     title: "Ajio: Everything under Rs. 299 + Upto 10% CashKaro Cashback",
+//     details: ["Everything under Rs. 299", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],  
+//   },
 
-  {
-    id: 4,
-    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Skincare-1747131065.png",
-    title: "Ajio: Min. 40% Off on SkinCare + Upto 10% CashKaro Cashback",
-    details: ["Minimum 40% Off on Skincare", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
-  },
+//   {
+//     id: 4,
+//     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Skincare-1747131065.png",
+//     title: "Ajio: Min. 40% Off on SkinCare + Upto 10% CashKaro Cashback",
+//     details: ["Minimum 40% Off on Skincare", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
+//   },
 
-  {
-    id: 5,
-    img: "https://asset22.ckassets.com/resources/image/staticpage_images/MenTrousers-1747131039.png",
-    title: "Ajio: Min. 50% Off on FootWear + Upto 10% CashKaro Cashback",
-    details: ["Minimum 50% Off on Footwear", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
-  },
+//   {
+//     id: 5,
+//     img: "https://asset22.ckassets.com/resources/image/staticpage_images/MenTrousers-1747131039.png",
+//     title: "Ajio: Min. 50% Off on FootWear + Upto 10% CashKaro Cashback",
+//     details: ["Minimum 50% Off on Footwear", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
+//   },
 
-  {
-    id: 6,
-    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Pants%20Trousers-1747131097.png",
-    title: "Ajio: 40% to 70% Off on Pants & Trousers + Upto 10% CashKaro Cashback",
-    details: ["40-70% Off on Trousers and Pants", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],  
-  },
+//   {
+//     id: 6,
+//     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Pants%20Trousers-1747131097.png",
+//     title: "Ajio: 40% to 70% Off on Pants & Trousers + Upto 10% CashKaro Cashback",
+//     details: ["40-70% Off on Trousers and Pants", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],  
+//   },
 
-  {
-    id: 7,
-    img: "https://asset22.ckassets.com/resources/image/staticpage_images/TShirt-1747131108.png",
-    title: "Ajio: 40% to 60% Off on T-Shirt + Upto 10% CashKaro Cashback",
-    details: ["40-60% Off on Tshirt", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],  
-  },
+//   {
+//     id: 7,
+//     img: "https://asset22.ckassets.com/resources/image/staticpage_images/TShirt-1747131108.png",
+//     title: "Ajio: 40% to 60% Off on T-Shirt + Upto 10% CashKaro Cashback",
+//     details: ["40-60% Off on Tshirt", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],  
+//   },
 
-  {
-    id: 8,
-    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Women%20Handbags-1747131120.png",
-    title: "Ajio: Upto 70% Off on Women's HandBags + Upto 10% CashKaro Cashback",
-    details: ["Up to 70% Off on Women Handbags", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
-  },
+//   {
+//     id: 8,
+//     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Women%20Handbags-1747131120.png",
+//     title: "Ajio: Upto 70% Off on Women's HandBags + Upto 10% CashKaro Cashback",
+//     details: ["Up to 70% Off on Women Handbags", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
+//   },
 
-  {
-    id: 9,
-    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Dress-1747131083.png",
-    title: "Ajio: Under 899 on Dresses + Upto 10% CashKaro Cashback",
-    details: ["Dresses under Rs. 899", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
-  },
+//   {
+//     id: 9,
+//     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Dress-1747131083.png",
+//     title: "Ajio: Under 899 on Dresses + Upto 10% CashKaro Cashback",
+//     details: ["Dresses under Rs. 899", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
+//   },
 
-  {
-    id: 10,
-    img: "https://asset22.ckassets.com/resources/image/staticpage_images/Under%20527-1746696315.png",
-    title: "Ajio: Everything under Rs. 299 + Upto 8% CashKaro Cashback",
-    details: ["Everything under Rs. 299", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
-  },
-  
-];
+//   {
+//     id: 10,
+//     img: "https://asset22.ckassets.com/resources/image/staticpage_images/Under%20527-1746696315.png",
+//     title: "Ajio: Everything under Rs. 299 + Upto 8% CashKaro Cashback",
+//     details: ["Everything under Rs. 299", "Flat 10% Ajio Supercash on all Orders", "Upto 10% CashKaro Cashback on all Orders"],
+//   },
+
+// ];
+
 
 export default function Ajio() {
+
+  const { data, error } = useFetch("http://localhost:3000/api/product")
 
   const settings = {
     dots: false,          // shows navigation dots
@@ -88,8 +92,11 @@ export default function Ajio() {
     autoplaySpeed: 2000, // 2 seconds
   };
 
+  const AjioProducts = Array.isArray(data.Data) && data.Data.filter((items) => {
+    return items.brandDetails.Brandname === "AJIO"
+  })
 
-
+  console.log(AjioProducts)
   return (
     <>
       <h1 className="text-2xl font-bold mx-7">Ajio - Top Deals</h1>
@@ -97,26 +104,26 @@ export default function Ajio() {
       <div className="min-w-[200px] m-7">
         <Slider {...settings}>
 
-          {AjioImage.map((image, index) => (
+
+          {Array.isArray(AjioProducts) && AjioProducts.map((image) => (
             <div
-              key={index}
               className="min-w-[180px] relative cursor-pointer"
             >
-              <Link key={image.id} to={`/Ajio/${image.id}`}>
+
+              <Link key={image._id} to={`/Ajio/${image._id}`}>
                 <img
-                  src={image.img}
-                  alt={image.title}
-                  className=""
+                  src={image.productUrl}
+                  key={image._id}
+                  alt={error}
                   width={410}
                 />
               </Link>
 
               <img
-                src="https://asset20.ckassets.com/resources/image/stores/ajio-coupons-1735561339.jpg"
+                src={image.brandDetails.BrandLogo}
                 className="absolute rounded-xl left-[3%] top-[4%] right-[60%] bottom-[90%]"
                 height={90}
                 width={100}
-                alt={`Slide ${index}`}
               />
 
               <button className="absolute cursor-pointer inline bottom-[6%] left-[71%] rounded-lg px-3 py-1 bg-white text-blue-700 font-semibold text-lg">
@@ -131,4 +138,4 @@ export default function Ajio() {
 
 }
 
-export { AjioImage };
+// export { AjioImage };

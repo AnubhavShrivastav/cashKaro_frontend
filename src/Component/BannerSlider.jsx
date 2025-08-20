@@ -24,13 +24,13 @@ function BannerSlider() {
 
   const { data, error } = useFetch("http://localhost:3000/api/banner")
 
-  
+
   return (
 
     <div className="my-6 mx-10 sm:mx-9 sm:my-10 sm:mt-28">
       <Slider {...settings}>
 
-        {Array.isArray(data.Data)&&data.Data.map((img) => (
+        {Array.isArray(data.Data) && data.Data.map((img) => (
           <div className="px-1 sm:px-2">
             <img
               src={img.imageUrl}
