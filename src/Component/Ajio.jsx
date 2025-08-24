@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Slider, settings } from "../Constant.jsx"
 import useFetch from "../Hooks/UseFetch";
 
 // const AjioImage = [
@@ -82,32 +80,21 @@ export default function Ajio() {
 
   const { data, error } = useFetch("http://localhost:3000/api/product")
 
-  const settings = {
-    dots: false,          // shows navigation dots
-    infinite: false,      // infinite loop
-    speed: 500,          // transition speed in ms
-    slidesToShow: 3.5,     // number of slides visible
-    slidesToScroll: 1,   // number of slides to scroll at a time
-    autoplay: false,      // auto slide
-    autoplaySpeed: 2000, // 2 seconds
-  };
 
   const AjioProducts = Array.isArray(data.Data) && data.Data.filter((items) => {
     return items.brandDetails.Brandname === "AJIO"
   })
 
-  console.log(AjioProducts)
   return (
     <>
       <h1 className="text-2xl font-bold mx-7">Ajio - Top Deals</h1>
 
       <div className="min-w-[200px] m-7">
-        <Slider {...settings}>
-
+        <Slider {...settings} className="mx-3">
 
           {Array.isArray(AjioProducts) && AjioProducts.map((image) => (
             <div
-              className="min-w-[180px] relative cursor-pointer"
+              className="min-w-[180px] mx-2 relative cursor-pointer"
             >
 
               <Link key={image._id} to={`/Ajio/${image._id}`}>
@@ -115,7 +102,7 @@ export default function Ajio() {
                   src={image.productUrl}
                   key={image._id}
                   alt={error}
-                  width={410}
+                  width={430}
                 />
               </Link>
 
@@ -126,7 +113,7 @@ export default function Ajio() {
                 width={100}
               />
 
-              <button className="absolute cursor-pointer inline bottom-[6%] left-[71%] rounded-lg px-3 py-1 bg-white text-blue-700 font-semibold text-lg">
+              <button className="absolute cursor-pointer inline bottom-[6%] left-[68%] rounded-lg px-3 py-1 bg-white text-blue-700 font-semibold text-lg">
                 Grab Deal
               </button>
             </div>

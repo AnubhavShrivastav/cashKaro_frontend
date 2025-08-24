@@ -1,9 +1,6 @@
-// import { Slider, settings } from "../Constant.js"
+import { Slider, categorySettings } from "../Constant.jsx"
 import useFetch from "../Hooks/UseFetch"
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "../App.css"
+
 
 
 // const images = [
@@ -27,33 +24,23 @@ import "../App.css"
 
 
 
-function CategorySlider() {
+ function CategorySlider() {
 
-  const settings = {
-    dots: false,          // shows navigation dots
-    infinite: false,      // infinite loop
-    speed: 500,          // transition speed in ms
-    slidesToShow: 8.4,     // number of slides visible
-    slidesToScroll: 3,   // number of slides to scroll at a time
-    autoplay: false,      // auto slide
-    autoplaySpeed: 2000, // 2 seconds
-    arrow: true
-  };
 
- const { data, error } = useFetch("http://localhost:3000/api/category")
+  const { data, error } = useFetch("http://localhost:3000/api/category")
 
 
   return (
     <div className="min-w-[200px] my-3">
       <h1 className="text-2xl font-bold py-6 mb-2 mx-10">Top Categories</h1>
 
-      <div className="min-w-[200px] ml-8 mr-10 my-3">
-        <Slider {...settings}>
-          {Array.isArray(data.Data)&&data.Data.map((item) => (
+      <div className="min-w-[200px] mx-11 my-3">
+        <Slider {...categorySettings}>
+          {Array.isArray(data.Data) && data.Data.map((item) => (
             <div className="px-1 mb-6">
               <img
                 src={item.imageUrl}
-                className="mx-1 hover:scale-105"
+                className="mx-1 hover:scale-105 cursor-pointer"
                 alt={error}
                 height={125}
                 width={135}

@@ -1,5 +1,5 @@
 import useFetch from "../Hooks/UseFetch";
-import { Slider, settings } from "../Constant.js"
+import { Slider, settings } from "../Constant.jsx"
 
 
 // export const images = [
@@ -27,7 +27,7 @@ function BannerSlider() {
 
   return (
 
-    <div className="my-6 mx-10 sm:mx-9 sm:my-10 sm:mt-28">
+    <div className="my-6 mx-10 sm:mx-10 sm:my-8 sm:mt-28">
       <Slider {...settings}>
 
         {Array.isArray(data.Data) && data.Data.map((img) => (
@@ -36,7 +36,7 @@ function BannerSlider() {
               src={img.imageUrl}
               key={img.id}
               alt={error}
-              className="w-[400px] h-[100px] md:w-[534px] md:h-[248px] rounded-xl"
+              className="w-[400px] h-[100px] md:w-[540px] md:h-[255px] rounded-xl"
             />
           </div>
         ))}

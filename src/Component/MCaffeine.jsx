@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom"
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Slider, settings } from "../Constant.jsx"
 import useFetch from "../Hooks/UseFetch";
 
 
@@ -74,15 +72,6 @@ export default function MCaffeine() {
 
   const { data, error } = useFetch("http://localhost:3000/api/product")
 
-  const settings = {
-    dots: false,          // shows navigation dots
-    infinite: false,      // infinite loop
-    speed: 500,          // transition speed in ms
-    slidesToShow: 3.5,     // number of slides visible
-    slidesToScroll: 1,   // number of slides to scroll at a time
-    autoplay: false,      // auto slide
-    autoplaySpeed: 2000, // 2 seconds
-  };
 
   const MCaffeineProducts = Array.isArray(data.Data) && data.Data.filter((items) => {
     return items.brandDetails.Brandname === "Mcaffeine"
@@ -93,17 +82,17 @@ export default function MCaffeine() {
       <h1 className="text-2xl font-bold mx-7">mCaffeine - Buy 1 Get 1 Free</h1>
 
       <div className="min-w-[200px] m-7">
-        <Slider {...settings}>
+        <Slider {...settings} className="mx-3">
           {Array.isArray(MCaffeineProducts) && MCaffeineProducts.map((image) => (
             <div
-              className="min-w-[180px] relative cursor-pointer"
+              className="min-w-[180px] mx-2 relative cursor-pointer"
             >
               <Link key={image._id} to={`/Mcaffeine/${image._id}`}>
                 <img
                   src={image.productUrl}
                   key={image._id}
                   alt={error}
-                  width={410}
+                  width={430}
                 />
               </Link>
               <img

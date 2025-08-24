@@ -12,7 +12,7 @@ function Sidebar() {
       <Link className="menu-item" to="/">Retailers by Category</Link>
       <Link className="menu-item" to="/">Top Product Deals</Link>
 
-      <hr className='horizontal-line' /> 
+      <hr className='horizontal-line' />
 
       <Link className="menu-item" to="/">Mobiles</Link>
       <Link className="menu-item" to="/">Headphones</Link>

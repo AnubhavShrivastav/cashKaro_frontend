@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Slider, settings } from "../Constant.jsx"
 import useFetch from "../Hooks/UseFetch";
-
 
 
 // const HyphenImage = [
@@ -89,16 +86,6 @@ export default function Hyphen() {
   const { data, error } = useFetch("http://localhost:3000/api/product")
 
 
-  const settings = {
-    dots: false,          // shows navigation dots
-    infinite: false,      // infinite loop
-    speed: 500,          // transition speed in ms
-    slidesToShow: 3.5,     // number of slides visible
-    slidesToScroll: 3,   // number of slides to scroll at a time
-    autoplay: false,      // auto slide
-    autoplaySpeed: 2000, // 2 seconds
-  };
-
   const HyphenProducts = Array.isArray(data.Data) && data.Data.filter((items) => {
     return items.brandDetails.Brandname === "Hyphen"
   })
@@ -108,16 +95,16 @@ export default function Hyphen() {
       <h1 className="text-2xl font-bold mx-7">Hyphen - Buy 1 Get 1 Free</h1>
 
       <div className="min-w-[200px] m-7">
-        <Slider {...settings}>
+        <Slider {...settings} className="mx-3">
 
           {Array.isArray(HyphenProducts) && HyphenProducts.map((image, index) => (
             <div
-              className="min-w-[180px] mx-1 relative cursor-pointer"
+              className="min-w-[180px] mx-2 relative cursor-pointer"
             >
               <Link key={image._id} to={`/Hyphen/${image._id}`}>
 
                 <img src={image.productUrl} key={image._id}
-                  alt={error} width={410} />
+                  alt={error} width={430} />
 
               </Link>
               <img

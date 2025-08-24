@@ -1,4 +1,5 @@
 import useFetch from "../Hooks/UseFetch";
+import { Slider, settings } from "../Constant.jsx"
 
 // const Banner = [
 //   { image: "https://asset22.ckassets.com/resources/image/staticpage_images/Vajor-1754553346-68945c02c2cd7.png", brandLogo: "https://asset20.ckassets.com/resources/image/stores/estuary-world-coupons-1741361039.png" },
@@ -19,48 +20,47 @@ import useFetch from "../Hooks/UseFetch";
 
 function FlashDeal() {
 
-
   const { data, error } = useFetch("http://localhost:3000/api/flashdeal")
 
   return (
-    <div className="my-50 sm:my-8">
-      <div className="relative">
-        <img
-          src="https://asset22.ckassets.com/resources/image/dynamicpage_images/Desktop_Background-1740145506.png"
-          height={6000}
-          width={3500}
-          alt={error}
-        />
+    <>
 
-        <div className="">
-          <h1 className="absolute right-[40%] left-[42%] bottom-[90%] text-white text-4xl font-extrabold">
-            FLASH DEAL
-          </h1>
-          <p className="absolute right-[40%] left-[40%] bottom-[80%] p-1 text-gray-500 text-center bg-white">
-            🕓 Ends in 01 day
-          </p>
+      <div className="flex justify-center my-3 md:my-5 relative w-full h-lvh bg-cover bg-center bg-[url('/img/FlashDeal.png')]">
 
-          <div className="flex overflow-auto min-w-[200px] h-[330px] absolute bottom-[20%] left-[3%]">
-            {Array.isArray(data.Data) && data.Data.map((img) => (
+        <div className="my-10 absolute">
+          <h1 className="font-bold text-6xl text-white">FLASH DEAL</h1>
+          <p className="my-5 mx-14 bg-white px-12 py-1 text-gray-800 rounded-xs">🕓 Ends in 01 day</p>
+        </div>
+         
+        <Slider {...settings} className="overflow-hidden absolute mx-10">
+          {Array.isArray(data.Data) && data.Data.map((img) => (
+            <div className="mt-50">
+
               <img
                 src={img.imageUrl}
-                className="mx-2 inline"
+                className="w-[430px] mx-6 mt-6 object-cover"
+                alt={error}
               />
 
-            ))}
+              <img
+                src={img.brandLogo}
+                className="absolute bottom-[40%] w-[130px] h-[50px] mx-10 object-cover"
 
+              />
 
-          </div>
+              <button className="mx-20 cursor-pointer inline rounded-lg px-3 py-1 bg-blue-700 text-white font-bold text-lg">Grab deal</button>
 
-          <button className="block absolute right-[34%] left-[40%] bottom-[5%] m-3 rounded-lg px-30 py-3 bg-neutral-300 opacity-300 text-white font-bold">
-            View All
-          </button>
+            </div>
 
+          ))}
 
-        </div>
+        </Slider>
+        <button className="absolute bottom-10 left-[40%] bg-zinc-400 opacity-70 border-white px-30 py-2 text-white font-extrabold text-xl">View All</button>
+
       </div>
-    </div>
-  );
+
+    </>
+  )
 }
 
-export default FlashDeal;
+export default FlashDeal
