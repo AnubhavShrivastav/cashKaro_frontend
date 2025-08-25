@@ -1,11 +1,11 @@
 import { useParams, Link, useLocation } from "react-router-dom"
 import { useEffect } from 'react'
-import { AjioImage } from "../Component/Ajio"
+// import { AjioImage } from "../Component/Ajio"
 import Header from "../Component/Header"
-import { AmazonImage } from "../Component/Amazon"
-import { flipkartImage } from "../Component/Flipkart"
-import { MyntraImage } from "../Component/Myntra"
-import { MCaffeineImage } from "../Component/MCaffeine"
+// import { AmazonImage } from "../Component/Amazon"
+// import { flipkartImage } from "../Component/Flipkart"
+// import { MyntraImage } from "../Component/Myntra"
+// import { MCaffeineImage } from "../Component/MCaffeine"
 import Footer from "../Component/Footer";
 
 function ImageDeatils() {
@@ -13,16 +13,16 @@ function ImageDeatils() {
   const { pathName } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0)
-  },[pathName])
+    window.scrollTo(0, 0)
+  }, [pathName])
 
-  const allData = {
-    Amazon: AmazonImage,
-    Ajio: AjioImage,
-    Flipcart: flipkartImage,
-    Myntra: MyntraImage,
-    Mcaffeine: MCaffeineImage,
-  }
+  // const allData = {
+  //   Amazon: AmazonImage,
+  //   Ajio: AjioImage,
+  //   Flipcart: flipkartImage,
+  //   Myntra: MyntraImage,
+  //   Mcaffeine: MCaffeineImage,
+  // }
 
   const selectedImage = allData[category] || []
 
@@ -246,7 +246,7 @@ function ImageDeatils() {
         }
       </div>
 
-      
+
       <div>
         {
           selectedImage === flipkartImage ?
@@ -261,7 +261,7 @@ function ImageDeatils() {
                 ))
               }
 
-          
+
               <h1 className="text-lg font-bold my-5 -ml-4">CashKaro Rewards Details</h1>
               <div className="mb-8">
                 <table className="table-auto w-full border border-gray-500">
@@ -376,7 +376,7 @@ function ImageDeatils() {
                     <td className="border px-4 py-2">0.7%</td>
                   </tr>
 
-                   <tr>
+                  <tr>
                     <td className="border px-4 py-2">Cashback on Samsung Galaxy S25 5G,Samsung Galaxy A55 5G,Samsung Galaxy S25 Ultra 5G,Samsung Galaxy Z Flip5, Xiaomi 14 Ultra,VIVO V50(Max Cashback: Rs.70)	</td>
                     <td className="border px-4 py-2">0.7%</td>
                   </tr>
@@ -387,45 +387,45 @@ function ImageDeatils() {
                   </tr>
 
                   <tr>
-                   <td className="border px-4 py-2">Cashback on Vivo Y300 5G,Vivo V30 5G,Vivo V30 Pro 5G,Vivo V40 5G,Vivo V40 Pro 5G,Vivo X200 5G,Vivo Y200 Pro 5G,Vivo X200 Pro 5G,Vivo X200 Pro 5G(Max Cashback: Rs.70)	</td>
+                    <td className="border px-4 py-2">Cashback on Vivo Y300 5G,Vivo V30 5G,Vivo V30 Pro 5G,Vivo V40 5G,Vivo V40 Pro 5G,Vivo X200 5G,Vivo Y200 Pro 5G,Vivo X200 Pro 5G,Vivo X200 Pro 5G(Max Cashback: Rs.70)	</td>
                     <td className="border px-4 py-2">0.7%</td>
                   </tr>
 
                   <tr>
-                   <td className="border px-4 py-2">Cashback on vivo T3 Lite 5G,Samsung Galaxy A14 5G,Redmi 13c 5G,Redmi Note 13 5G,Realme C67 5G,OPPO A18,OPPO F21 Pro,realme 11 5G(Max Cashback: Rs.70)	</td>
+                    <td className="border px-4 py-2">Cashback on vivo T3 Lite 5G,Samsung Galaxy A14 5G,Redmi 13c 5G,Redmi Note 13 5G,Realme C67 5G,OPPO A18,OPPO F21 Pro,realme 11 5G(Max Cashback: Rs.70)	</td>
                     <td className="border px-4 py-2">0.35%</td>
                   </tr>
 
                   <tr>
-                   <td className="border px-4 py-2">Cashback on Realme C11 2021,realme GT Neo 3T,Realme X3 SuperZoom,Redmi Note 12 5G,Samsung Galaxy A23 5G,Vivo Y16,OPPO A3x 5G(Max Cashback: Rs.70)	</td>
+                    <td className="border px-4 py-2">Cashback on Realme C11 2021,realme GT Neo 3T,Realme X3 SuperZoom,Redmi Note 12 5G,Samsung Galaxy A23 5G,Vivo Y16,OPPO A3x 5G(Max Cashback: Rs.70)	</td>
                     <td className="border px-4 py-2">0.35%</td>
                   </tr>
 
                   <tr>
-                   <td className="border px-4 py-2">Cashback on Vivo Y18t,Vivo Y28e 5G,Vivo Y22,Vivo Y18i,Vivo Y36,Vivo Y100A,Vivo Y27(Max Cashback: Rs.70)	</td>
+                    <td className="border px-4 py-2">Cashback on Vivo Y18t,Vivo Y28e 5G,Vivo Y22,Vivo Y18i,Vivo Y36,Vivo Y100A,Vivo Y27(Max Cashback: Rs.70)	</td>
                     <td className="border px-4 py-2">0.35%</td>
                   </tr>
 
                   <tr>
-                   <td className="border px-4 py-2">Cashback on Flipkart Gift Cards | Apple Audio	</td>
-                    <td className="border px-4 py-2">0%</td>
-                  </tr>
-
-                   <tr>
-                   <td className="border px-4 py-2">Cashback on Gemstones, Precious Jewellery, Gold and Silver Coins	</td>
+                    <td className="border px-4 py-2">Cashback on Flipkart Gift Cards | Apple Audio	</td>
                     <td className="border px-4 py-2">0%</td>
                   </tr>
 
                   <tr>
-                   <td className="border px-4 py-2">Cashback on Flipkart Minutes | Home and Kitchen Electronic Appliances | All other Categories not mentioned	</td>
+                    <td className="border px-4 py-2">Cashback on Gemstones, Precious Jewellery, Gold and Silver Coins	</td>
                     <td className="border px-4 py-2">0%</td>
                   </tr>
-                  
+
+                  <tr>
+                    <td className="border px-4 py-2">Cashback on Flipkart Minutes | Home and Kitchen Electronic Appliances | All other Categories not mentioned	</td>
+                    <td className="border px-4 py-2">0%</td>
+                  </tr>
+
 
                 </table>
               </div>
 
-              
+
               <h1 className="text-lg font-bold my-2 -ml-4">How to get this Offer</h1>
               <ul className="list-disc mb-10">
                 <li>Click on the Orange Button and visit Ajio</li>
@@ -436,7 +436,7 @@ function ImageDeatils() {
               <h1 className="text-lg font-bold my-2 -ml-4">Important Information</h1>
               <ul className="list-disc mb-10">
                 <li>Shipping charges as applicable depending upon order value and pincode</li>
-                
+
               </ul>
 
             </div>
@@ -444,7 +444,7 @@ function ImageDeatils() {
         }
       </div>
 
- 
+
       <div>
         {
           selectedImage === MyntraImage ?
@@ -459,7 +459,7 @@ function ImageDeatils() {
                 ))
               }
 
-             
+
 
               <h1 className="text-lg font-bold mb-2 mt-8 -ml-4">Cashback Rates</h1>
               <div className="mb-8">
@@ -554,7 +554,7 @@ function ImageDeatils() {
                 <li>Cashback on all Orders of Gold & Silver (Idols, Bars, Coins, and Jewellery): 0.33%</li>
               </ul>
 
-              
+
 
               <h1 className="text-lg font-bold my-2 -ml-4">CashKaro Cashback Related</h1>
               <ul className="list-disc mb-10">
@@ -574,7 +574,7 @@ function ImageDeatils() {
             : ""
         }
       </div>
-      
+
 
       <Footer />
     </>
