@@ -78,7 +78,7 @@ import useFetch from "../Hooks/UseFetch";
 
 export default function Ajio() {
 
-  const { data, error } = useFetch(`http://13.203.244.27/api/product`)
+  const { data, error } = useFetch(`${import.meta.env.VITE_API_URL}/api/product`)
 
 
   const AjioProducts = Array.isArray(data.Data) && data.Data.filter((items) => {
@@ -125,4 +125,3 @@ export default function Ajio() {
 
 }
 
-// export { AjioImage };

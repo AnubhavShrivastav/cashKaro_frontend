@@ -83,7 +83,7 @@ import useFetch from "../Hooks/UseFetch";
 
 export default function Hyphen() {
 
-  const { data, error } = useFetch(`http://13.203.244.27/api/product`)
+  const { data, error } = useFetch(`${import.meta.env.VITE_API_URL}/api/product`)
 
 
   const HyphenProducts = Array.isArray(data.Data) && data.Data.filter((items) => {

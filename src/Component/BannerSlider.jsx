@@ -1,6 +1,12 @@
 import useFetch from "../Hooks/UseFetch";
 import { Slider, settings } from "../Constant.jsx"
+// import dotenv from 'dotenv';
 
+// dotenv.config(
+//   {
+//    path: "src/.env"
+//   }
+// );
 
 
 // export const images = [
@@ -22,14 +28,9 @@ import { Slider, settings } from "../Constant.jsx"
 // ];
 
 
-
 function BannerSlider() {
 
-
-
-
-  const { data, error } = useFetch(`http://13.203.244.27/api/banner`)
-
+  const { data, error } = useFetch(`${import.meta.env.VITE_API_URL}/api/banner`)
 
   return (
 

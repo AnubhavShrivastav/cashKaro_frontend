@@ -27,7 +27,7 @@ import useFetch from "../Hooks/UseFetch"
  function CategorySlider() {
 
 
-  const { data, error } = useFetch(`http://13.203.244.27/api/category`)
+  const { data, error } = useFetch(`${import.meta.env.VITE_API_URL}/api/category`)
 
 
   return (
