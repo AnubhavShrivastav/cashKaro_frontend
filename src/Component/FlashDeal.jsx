@@ -20,7 +20,7 @@ import { Slider, settings } from "../Constant.jsx"
 
 function FlashDeal() {
 
-  const { data, error } = useFetch("http://localhost:3000/api/flashdeal")
+  const { data, error } = useFetch(`http://13.203.244.27/api/flashdeal`)
 
   return (
     <>

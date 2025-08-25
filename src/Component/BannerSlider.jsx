@@ -2,6 +2,7 @@ import useFetch from "../Hooks/UseFetch";
 import { Slider, settings } from "../Constant.jsx"
 
 
+
 // export const images = [
 //   "https://asset22.ckassets.com/resources/image/staticpage_images/Desktop%20Banner-1746783373.png",
 //   "https://asset22.ckassets.com/resources/image/staticpage_images/Desktop%20Banner-1747036591.png",
@@ -20,9 +21,14 @@ import { Slider, settings } from "../Constant.jsx"
 //   "https://asset22.ckassets.com/resources/image/staticpage_images/Desktop%20Banner-1747740557.png",
 // ];
 
+
+
 function BannerSlider() {
 
-  const { data, error } = useFetch("http://localhost:3000/api/banner")
+
+
+
+  const { data, error } = useFetch(`http://13.203.244.27/api/banner`)
 
 
   return (

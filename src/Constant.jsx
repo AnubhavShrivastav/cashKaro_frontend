@@ -38,7 +38,7 @@ function SampleNextArrow(props) {
         src={"img/chevron-right.svg"}
         onClick={onClick}
         style={{ ...style }}
-        className="absolute -right-10 top-1/2 w-4 h-4 md:w-10 md:h-10 bg-gray-100 cursor-pointer rounded-[50%]"
+        className="absolute -right-10 top-1/2 w-4 h-4 md:w-10 md:h-10 hover:bg-gray-200 cursor-pointer rounded-[50%]"
       />
     </div>
 
@@ -55,7 +55,7 @@ function SamplePrevArrow(props) {
       <img src={"img/chevron-left.svg"}
         onClick={onClick}
         style={{ ...style }}
-        className="absolute z-1 -left-9 top-1/2 w-4 h-4 md:w-10 md:h-10 bg-gray-100 cursor-pointer rounded-[50%]" />
+        className="absolute z-1 -left-9 top-1/2 w-4 h-4 md:w-10 md:h-10 hover:bg-gray-200 cursor-pointer rounded-[50%]" />
     </div>
   );
 }
