@@ -20,7 +20,7 @@ import { Slider, settings } from "../Constant.jsx"
 
 function FlashDeal() {
 
-  const { data, error } = useFetch(`http://13.203.244.27/api/flashdeal`)
+  const { data, error } = useFetch(`${import.meta.env.VITE_API_URL}/api/flashdeal`)
 
   return (
     <>
@@ -31,7 +31,7 @@ function FlashDeal() {
           <h1 className="font-bold text-6xl text-white">FLASH DEAL</h1>
           <p className="my-5 mx-14 bg-white px-12 py-1 text-gray-800 rounded-xs">🕓 Ends in 01 day</p>
         </div>
-         
+
         <Slider {...settings} className="overflow-hidden absolute mx-10">
           {Array.isArray(data.Data) && data.Data.map((img) => (
             <div className="mt-50">
@@ -55,7 +55,7 @@ function FlashDeal() {
           ))}
 
         </Slider>
-        <button className="absolute bottom-10 left-[40%] bg-zinc-400 opacity-70 border-white px-30 py-2 text-white font-extrabold text-xl">View All</button>
+        <button className="absolute bottom-10 left-[40%] bg-gray-800 rounded-xl opacity-70 px-30 py-2 text-white font-extrabold text-xl">View All</button>
 
       </div>
 
