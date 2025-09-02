@@ -38,9 +38,9 @@ function Header() {
             width={26}
             className="m-1 cursor-pointer inline"
           />
-          <p className="text-xs font-medium sm:text-sm md:text-base sm:ml-1 sm:mr-5 cursor-pointer">
+          <Link to={"/login"} className="text-xs font-medium sm:text-sm md:text-base sm:ml-1 sm:mr-5 cursor-pointer">
             Login / Sign up
-          </p>
+          </Link>
         </div>
       </div>
     </header>
