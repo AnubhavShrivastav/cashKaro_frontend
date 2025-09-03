@@ -1,12 +1,6 @@
 import useFetch from "../Hooks/UseFetch";
 import { Slider, settings } from "../Constant.jsx"
-// import dotenv from 'dotenv';
 
-// dotenv.config(
-//   {
-//    path: "src/.env"
-//   }
-// );
 
 
 // export const images = [

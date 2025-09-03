@@ -8,6 +8,7 @@ function GoogleAuth() {
 
   const Client = "1035866504161-om2d5dopv4hln647gerge1n3o2o1tnbm.apps.googleusercontent.com"
 
+
   const handleSuccess = async (credentialResponse) => {
     try {
       const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/google`, {
@@ -15,7 +16,7 @@ function GoogleAuth() {
       });
 
       console.log("Backend response:", res.data);
-      navigate("/app")
+      navigate("/")
       // Save token in localStorage
       localStorage.setItem("token", res.data.token);
 
