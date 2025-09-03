@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom"
 function GoogleAuth() {
   const navigate = useNavigate()
 
-  const Client = "1035866504161-om2d5dopv4hln647gerge1n3o2o1tnbm.apps.googleusercontent.com"
-
+  const Client = `${import.meta.env.VITE_CLIENT}`
+  console.log(Client)
 
   const handleSuccess = async (credentialResponse) => {
     try {
@@ -26,7 +26,7 @@ function GoogleAuth() {
   };
 
   return (
-    <GoogleOAuthProvider clientId={Client} >
+    <GoogleOAuthProvider clientId={import.meta.env.VITE_CLIENT} >
       <GoogleLogin
         onSuccess={handleSuccess}
         onError={() => console.log("Google Login Failed")}
