@@ -1,5 +1,5 @@
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google"
-// import { jwtDecode } from "jwt-decode"
+import { jwtDecode } from "jwt-decode"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
@@ -7,7 +7,9 @@ function GoogleAuth() {
   const navigate = useNavigate()
 
   const Client = `${import.meta.env.VITE_CLIENT}`
-  console.log(Client)
+  console.log(`CLIENT_id: ${Client}`)
+  console.log(import.meta.env.VITE_API_URL)
+
 
   const handleSuccess = async (credentialResponse) => {
     try {
@@ -15,10 +17,13 @@ function GoogleAuth() {
         token: credentialResponse.credential,
       });
 
+      console.log(`token: ${credentialResponse.credential}`)
+      console.log(jwtDecode(credentialResponse.credential))
+
       console.log("Backend response:", res.data);
-      navigate("/")
       // Save token in localStorage
       localStorage.setItem("token", res.data.token);
+      navigate("/")
 
     } catch (err) {
       console.error(" Login failed:", err);
