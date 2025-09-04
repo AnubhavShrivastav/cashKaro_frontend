@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 function GoogleAuth() {
   const navigate = useNavigate()
 
-  const Client = `${import.meta.env.VITE_CLIENT}`
+  const Client = import.meta.env.VITE_CLIENT
   console.log(`CLIENT_id: ${Client}`)
   console.log(import.meta.env.VITE_API_URL)
 
