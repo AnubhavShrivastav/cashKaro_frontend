@@ -14,7 +14,7 @@ function Login() {
 
   const sendOTP = async () => {
     try {
-      const res = await axios.post("http://localhost:3000/api/auth/phone", {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/phone`, {
         phone: phone
       });
       console.log("backend response", res.data)
@@ -27,7 +27,7 @@ function Login() {
 
   const verifyOTP = async () => {
     try {
-      const res = await axios.post("http://localhost:3000/api/auth/verifyotp", {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/verifyotp`, {
         phone, otp
       })
       console.log("backend response :", res.data)
