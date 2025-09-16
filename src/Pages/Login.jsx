@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom"
 function Login() {
 
   const [phone, setPhone] = useState("")
-  const [otp, setotp] = useState("")
 
   const navigate = useNavigate()
 
@@ -18,24 +17,10 @@ function Login() {
         phone: phone
       });
       console.log("backend response", res.data)
+      navigate("/verifyotp", { state: phone })
 
     } catch (error) {
       console.log("failed to generate OTP", error)
-    }
-  }
-
-
-  const verifyOTP = async () => {
-    try {
-      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/verifyotp`, {
-        phone, otp
-      })
-      console.log("backend response :", res.data)
-      localStorage.setItem("token", res.data.Data.mytoken)
-      navigate("/")
-
-    } catch (error) {
-      console.log(error)
     }
   }
 
@@ -48,10 +33,7 @@ function Login() {
         <h1 className="block text-4xl font-extrabold ml-30 mt-4">Login or signup</h1>
         <p className="ml-14 my-2">We will send the OTP to verify</p>
         <input type="text" className="p-2 ml-10 my-2 border-1 border-gray-400 rounded-lg" placeholder="Enter Mobile Number" value={phone} max={10} onChange={(e) => setPhone(e.target.value)} />
-        <input type="text" className="p-2 ml-10 my-2 border-1 border-gray-400 rounded-lg" placeholder="Enter OTP" value={otp} max={4} onChange={(e) => setotp(e.target.value)} />
-
         <button onClick={sendOTP} className="bg-blue-600 text-white p-2 font-bold inline rounded-xs my-4 cursor-pointer">Send OTP</button>
-        <button onClick={verifyOTP} className="bg-blue-600 text-white p-2 font-bold inline rounded-xs my-4 cursor-pointer">Verify OTP</button>
         <span className="w-[0.5%] bg-red-600 h-0.5 m-4">
         </span>
         <p className="text-xl inline">or</p>
