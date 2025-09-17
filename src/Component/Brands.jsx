@@ -4,7 +4,7 @@ import { Slider, settings } from "../Constant.jsx"
 
 const Brands = () => {
 
-  const { data, error } = useFetch(`http://localhost:3000/api/brand`)
+  const { data, error } = useFetch(`${import.meta.env.VITE_API_URL}/api/brand`)
   return (
     <>
       {
@@ -21,7 +21,7 @@ const Brands = () => {
 
 const Products = ({ productId }) => {
 
-  const { data, error } = useFetch(`http://localhost:3000/api/product/${productId}`)
+  const { data, error } = useFetch(`${import.meta.env.VITE_API_URL}/api/product/${productId}`)
 
   return (
     <div className="min-w-[200px] m-7">
