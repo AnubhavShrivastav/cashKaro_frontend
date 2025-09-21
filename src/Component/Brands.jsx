@@ -31,15 +31,13 @@ const Products = ({ productId }) => {
           Array.isArray(data.Data) && data.Data.map((productdata) => (
             <div className="min-w-[180px] mx-2 relative cursor-pointer">
               <img src={productdata.productUrl} key={productdata._id}
-                alt={error} width={430} />
+                alt={error} className="w-[390px] md:w-[410px] lg:w-[430px] " />
               <img
                 src={productdata.brandDetails.BrandLogo}
-                className="absolute rounded-xl left-[3%] top-[4%] right-[60%] bottom-[90%]"
-                height={90}
-                width={100}
+                className="absolute w-[100px] h-[50px] sm:w-[60px] sm:h-[40px] lg:w-[100px] lg:h-[50px] rounded-xl left-[3%] top-[4%] right-[60%] bottom-[90%]"
                 alt={error}
               />
-              <button className="absolute cursor-pointer inline bottom-[6%] left-[71%] rounded-lg px-3 py-1 bg-white text-blue-700 font-semibold text-lg">
+              <button className="absolute left-[62%] cursor-pointer inline bottom-[6%] md:left-[71%] rounded-lg px-3 py-1 bg-white text-blue-700 font-semibold text-lg sm:text-sm xl:text-lg">
                 Grab Deal
               </button>
             </div>

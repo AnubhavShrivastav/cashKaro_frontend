@@ -28,7 +28,7 @@ function BannerSlider() {
 
   return (
 
-    <div className="my-6 mx-10 sm:mx-10 sm:my-8 sm:mt-28">
+    <div className="my-6 mx-12 sm:mx-10 sm:my-8 sm:mt-28">
       <Slider {...settings}>
 
         {Array.isArray(data.Data) && data.Data.map((img) => (
@@ -37,7 +37,7 @@ function BannerSlider() {
               src={img.imageUrl}
               key={img.id}
               alt={error}
-              className="w-[400px] h-[100px] md:w-[540px] md:h-[255px] rounded-xl"
+              className="w-[450px] h-[180px] sm:w-[400px] sm:h-[160px] md:w-[540px] md:h-[255px] rounded-xl"
             />
           </div>
         ))}

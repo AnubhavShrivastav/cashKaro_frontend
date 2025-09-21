@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from "axios"
-import { useNavigate, useLocation } from "react-router-dom"
+import { useNavigate, useLocation, Link } from "react-router-dom"
 import OtpInput from 'react-otp-input';
 import Header from './Header';
 import Footer from './Footer';
@@ -29,7 +29,9 @@ export default function OTP() {
       <Header />
 
       <div className='flex items-center flex-col justify-center h-screen bg-gray-100'>
-        <img src="img/arrow-left.svg" className='mr-40 my-6' alt="arrow" />
+        <Link to={"/login"}>
+        <img src="img/arrow-left.svg" className='mr-40 my-6 cursor-pointer' alt="arrow" />
+        </Link>
         <h1 className='my-4 mx-16 font-bold text-4xl'>Enter OTP</h1>
         <p>OTP send to {phone}</p>
 

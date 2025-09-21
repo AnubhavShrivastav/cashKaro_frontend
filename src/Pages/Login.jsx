@@ -3,7 +3,7 @@ import Footer from "../Component/Footer.jsx"
 import GoogleAuth from "../Component/GoogleAuth.jsx"
 import { useState } from "react"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 
 function Login() {
 
@@ -28,26 +28,22 @@ function Login() {
     <>
       <Header />
 
-      <div className="flex flex-col justify-center items-center border-1 border-blue-400 border-solid my-50 mx-60">
-        <img src="img/arrow-left.svg" alt="arrow" className="mr-35" />
-        <h1 className="block text-4xl font-extrabold ml-30 mt-4">Login or signup</h1>
-        <p className="ml-14 my-2">We will send the OTP to verify</p>
-        <input type="text" className="p-2 ml-10 my-2 border-1 border-gray-400 rounded-lg" placeholder="Enter Mobile Number" value={phone} max={10} onChange={(e) => setPhone(e.target.value)} />
-        <button onClick={sendOTP} className="bg-blue-600 text-white p-2 font-bold inline rounded-xs my-4 cursor-pointer">Send OTP</button>
-        <span className="w-[0.5%] bg-red-600 h-0.5 m-4">
-        </span>
-        <p className="text-xl inline">or</p>
-        <span className="w-[0.5%] bg-red-600 h-0.5 m-4">
-        </span>
+      <div className="flex flex-col sm:my-20 md:justify-center md:items-center md:my-50 md:mx-60">
+        <Link to={"/"}>
+          <img src="img/arrow-left.svg" alt="arrow" className="my-5 mx-2 md:mr-35" />
+        </Link>
+        <h1 className="text-3xl mx-3 md:text-4xl font-extrabold md:ml-30 md:mt-4">Login or signup</h1>
+        <p className="my-2 mx-3 text-sm md:ml-8">We will send the OTP to verify</p>
+        <input type="text" className="p-2 mx-3 md:ml-40 my-5 border-1 border-gray-400 rounded-lg md:w-80" placeholder="Enter Mobile Number" value={phone} max={10} onChange={(e) => setPhone(e.target.value)} />
+        <button onClick={sendOTP} className="bg-blue-600 text-white mx-20 p-2 font-bold inline md:rounded-xs rounded-xl my-4 cursor-pointer">Send OTP</button>
+        <p className="text-xl inline mx-50 my-3">or</p>
 
-        <p className="m-4">Continue with Google</p>
+        <p className="text-sm mx-36 my-3 md:m-8">Continue with Google</p>
         <GoogleAuth />
 
-        <p className="m-2">By continuing, you agree to CashKaro's terms &<br /> conditions and privacy policy</p>
+        <p className="text-sm m-5 md:m-2">By continuing, you agree to CashKaro's terms &<br /> conditions and privacy policy</p>
 
       </div>
-
-
       <Footer />
     </>
 

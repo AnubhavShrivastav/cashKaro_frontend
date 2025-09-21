@@ -4,7 +4,7 @@ function Footer() {
 
   return (
     <footer className="bottom-0 w-full bg-neutral-600 py-6 px-1 sm:py-9">
-      <div className="flex items-start justify-center text-white text-xs sm:text-sm sm:px-70 sm:gap-32">
+      <div className="flex items-start justify-center text-white text-xs sm:text-sm sm:px-70 sm:gap-30">
         <div className="flex flex-col gap-3">
           <p className="text-base pr-3 sm:text-lg">About CashKaro</p>
           <Link className="hover:underline hover:text-cyan-300">About Us</Link>

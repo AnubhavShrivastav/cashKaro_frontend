@@ -13,8 +13,55 @@ const settings = {
   autoplaySpeed: 2000, // 2 seconds
   arrow: true,
   nextArrow: <SampleNextArrow />,
-  prevArrow: <SamplePrevArrow />
-};
+  prevArrow: <SamplePrevArrow />,
+  responsive: [
+    {
+      breakpoint: 640,
+      settings: {
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+
+     {
+      breakpoint: 768,
+      settings: {
+        dots: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
+
+  {
+      breakpoint: 1024,
+      settings: {
+        dots: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+  },
+
+  {
+      breakpoint: 1280,
+      settings: {
+        dots: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+  },
+],
+
+ appendDots: dots => (
+      <div
+        style={{
+        marginTop: "10px"
+        }}
+      >
+        <ul style={{ marginTop: "20px", paddingTop: "10px" }}> {dots} </ul>
+      </div>
+    ),
+ };
 
 const categorySettings = {
   dots: false, // shows navigation dots
@@ -26,7 +73,35 @@ const categorySettings = {
   autoplaySpeed: 2000, // 2 seconds
   arrow: true,
   nextArrow: <SampleNextArrow />,
-  prevArrow: <SamplePrevArrow />
+  prevArrow: <SamplePrevArrow />,
+  responsive: [
+    {
+      breakpoint: 640,
+      settings: {
+        dots: true,
+        slidesToShow: 5.2,
+        slidesToScroll: 3,
+      }
+    },
+
+    {
+      breakpoint: 768,
+      settings: {
+        dots: true,
+        slidesToShow: 6.3,
+        slidesToScroll: 3,
+      }
+  },
+
+   {
+      breakpoint: 1024,
+      settings: {
+        dots: false,
+        slidesToShow: 6.3,
+        slidesToScroll: 3,
+      }
+  },
+  ]
 };
 
 function SampleNextArrow(props) {
@@ -59,7 +134,5 @@ function SamplePrevArrow(props) {
     </div>
   );
 }
-
-
 
 export { Slider, settings, categorySettings };
